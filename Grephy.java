@@ -1,12 +1,13 @@
 import java.util.*;
 import java.io.*;
 public class Grephy{
+  public static String regex;
+  
   public static void main(String[] args) throws IOException {
     Grephy grephy = new Grephy();
-    for (String fileName : args) {
-      File file = new File(fileName);
-      grephy.handleFile(file);
-    }
+    regex = args[0];
+    File file = new File(args[1]);
+    grephy.handleFile(file);
   }
   
   public void handleFile(File file) throws IOException {
