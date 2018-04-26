@@ -70,14 +70,15 @@ public class Grephy{
         treeMap.put(ch, treeMap.get(ch) + 1);
       }
     }
-    
-// print the count
+    //add letters used to file alphabet
     for (char key : treeMap.keySet()) {
       int count = treeMap.get(key);
       if (count > 0) {
         alphabet.add(key);
-        System.out.println(key + ":" + treeMap.get(key));
       }
+    }
+    for(int i = 0; i < alphabet.size();i++){
+      System.out.println(alphabet.get(i));
     }
     //loops through the file in the form of a string
     for(int i = 0; i < contents.length(); i++) {
